@@ -1,0 +1,25 @@
+ <div class="result" ng-if="list.items.length" >
+        <div ><strong>Based on your search results, following items were found, Total items : {{list.items.length}}</strong></div><br/>
+       
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Short Name</th>
+                    <th>Description</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                 <!-- <loop-items my-list="list" on-remove="list.delete(index)"></loop-items>-->
+                <tr ng-repeat="item in list.items">
+                    <td>{{item.name}}</td>
+                    <td>{{item.short_name}}</td>
+                    <td>{{item.description}}</td>
+                    <td><button class="btn btn-primary" ng-click="list.delete($index)">Don't want this one!</button></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>    

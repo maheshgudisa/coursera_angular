@@ -1,0 +1,12 @@
+h1 {
+  margin-bottom: 30px;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+table{
+    margin-bottom: 70px;
+}

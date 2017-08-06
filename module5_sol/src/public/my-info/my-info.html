@@ -1,0 +1,23 @@
+<div class="container ng-center">
+    <div  ng-if="MyInfo.registerd">
+        <h2>Welcome {{MyInfo.user.firstname}}</h2>
+        <br/>
+        <p>
+        
+            First Name     : {{MyInfo.user.firstname}}
+            <br/>
+            Last Name      : {{MyInfo.user.lastname}}<br/>
+            Email          : {{MyInfo.user.email}}<br/>
+            Phone          : {{MyInfo.user.phone}}<br/>
+            Short_Name     : {{MyInfo.user.menu}}<br/><br/>
+            
+            <img ng-center src="https://mahesh-gudisa.herokuapp.com/images/{{MyInfo.user.menu}}.jpg"><br/><br/>
+            Favourite Dish : {{MyInfo.user.name}}<br/>
+            Description    :  {{MyInfo.user.description}}<br/>
+            
+        </p>
+    </div>
+    <div ng-if="!MyInfo.registerd">
+        <p>Didn't Sign Up yet.<a ui-sref="public.signup"> Sign Up Now</a></p>
+    </div>
+</div>
